@@ -260,10 +260,10 @@ $builder->putVehicle($vehicle);
 
 /* now pack in the license file, readme and setup options */
 $builder->setPackageAttributes(array(
-    'changelog'     => file_get_contents($sources['docs'] . 'changelog.txt'),
-    'license'       => file_get_contents($sources['docs'] . 'license.txt'),
-    'readme'        => file_get_contents($sources['docs'] . 'readme.txt'),
-    'chunks'        => $BUILD_CHUNKS
+    'changelog' => file_get_contents($sources['docs'] . 'changelog.txt'),
+    'license'   => file_get_contents($sources['docs'] . 'license.txt'),
+    'readme'    => file_get_contents($sources['docs'] . 'readme.txt'),
+    'chunks'    => $BUILD_CHUNKS
 ));
 $modx->log(modX::LOG_LEVEL_INFO, 'Added package attributes and setup options.');
 
@@ -294,7 +294,7 @@ if (defined('PKG_AUTO_INSTALL') && PKG_AUTO_INSTALL) {
             'workspace'     => 1,
             'provider'      => 0,
             'source'        => $signature . '.transport.zip',
-            'package_name'  => $sig[0],
+            'package_name'  => PKG_NAME,
             'version_major' => $versionSignature[0],
             'version_minor' => !empty($versionSignature[1]) ? $versionSignature[1] : 0,
             'version_patch' => !empty($versionSignature[2]) ? $versionSignature[2] : 0,

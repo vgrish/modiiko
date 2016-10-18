@@ -3,10 +3,10 @@
 $snippets = array();
 
 $tmp = array(
-    'modiiko' => array(
+    /*'modiiko' => array(
         'file'        => 'modiiko',
         'description' => '',
-    ),
+    ),*/
 );
 
 foreach ($tmp as $k => $v) {
